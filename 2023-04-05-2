@@ -1,0 +1,6 @@
+student = [180,170,164,199,182,172,177]
+a = []
+for i in student:
+  if i >= 170:
+    a.append(i)
+print(a)
