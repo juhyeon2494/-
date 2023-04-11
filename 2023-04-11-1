@@ -1,0 +1,14 @@
+public class kjhkjh {
+
+	public static void main(String[] args) {
+int x = 18 ;
+System.out.print("x=");
+System.out.println(x);
+int y = 30 ;
+System.out.print("y=");
+System.out.println(y);
+System.out.print("x+y=");
+System.out.println(x+y);
+	}
+
+}
