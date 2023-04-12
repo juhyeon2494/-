@@ -1,0 +1,23 @@
+package kjh;
+
+public class kjh {
+
+	public static void main(String[] args) {
+int a;
+int b;
+a = 18;
+b = 99;
+System.out.printf("a는 %d 이고b는 %d입니다.\n",a, b);
+System.out.println("값을 바꿉니다~~");
+int temp;
+temp = a;
+a = b;
+b = temp;
+System.out.println("a에 값을 temp에 저장한다.");
+System.out.println("b에 값을 a에 저장한다.");
+System.out.println("temp에 값을 b에 저장한다.");
+System.out.printf("a는 %d 이고b는 %d입니다.\n",a, b);
+
+	}
+
+}
