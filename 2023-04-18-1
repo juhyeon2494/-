@@ -1,0 +1,15 @@
+package kjhkjh;
+
+import java.util.Scanner;
+
+public class kjh {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		System.out.println(num);
+	
+	}
+
+}
+#숫자 입력받기 다른 방식
