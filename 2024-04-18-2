@@ -1,0 +1,18 @@
+package kjhkjh;
+
+import java.util.Scanner;
+
+public class kjh {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		System.out.println(num);
+	
+	if (num<18)
+		System.out.println("num이 18보다 작네");
+	System.out.println("나약하다");
+	}
+
+}
+#if
