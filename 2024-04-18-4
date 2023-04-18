@@ -1,0 +1,19 @@
+package kjhkjh;
+
+import java.util.Scanner;
+
+public class kjh {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		System.out.println(num);
+	
+if (num % 2  == 0)
+	System.out.println("짝수");
+else
+	System.out.println("홀수");
+	}
+
+}
+#자바 짝수냐 홀수냐
