@@ -1,0 +1,4 @@
+class Human:
+  pass
+areum = Human()
+#클래스 만들기
