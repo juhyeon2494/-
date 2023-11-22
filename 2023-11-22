@@ -1,0 +1,28 @@
+button = 1
+if button == 1:
+  print("콜라")
+elif button == 2:
+  print("사이다")
+elif button ==3:
+  print("환타")
+else:
+  print("제공하지 않는 메뉴")
+
+
+
+  score = [86, 55, 48, 27, 99, 100]
+
+print(len(score))
+for i in range(len(score)):
+  if i % 2 == 1:
+    print(score[i], end="")
+#end="" 공백 없애줌
+
+
+
+score = [86, 55, 48, 27, 99, 100]
+
+for i in range(len(score)):
+  if i == 3:
+    continue
+  print(score[i])
