@@ -10,7 +10,7 @@ else:
 
 
 
-  score = [86, 55, 48, 27, 99, 100]
+score = [86, 55, 48, 27, 99, 100]
 
 print(len(score))
 for i in range(len(score)):
