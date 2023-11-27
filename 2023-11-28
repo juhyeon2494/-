@@ -1,0 +1,75 @@
+import tkinter as tk
+from tkinter import messagebox
+
+# 퀴즈 데이터
+quiz_data = [
+    {
+        "question": "세계에서 가장 큰 나라는?",
+        "options": ["미국", "러시아", "중국", "캐나다"],
+        "answer": "러시아"
+    },
+    {
+        "question": "태양계에서 가장 큰 행성은?",
+        "options": ["지구", "목성", "화성", "토성"],
+        "answer": "목성"
+    },
+    {
+        "question": "인간의 심장은 몇 개의 심실로 이루어져 있을까요?",
+        "options": ["1개", "2개", "3개", "4개"],
+        "answer": "4개"
+    }
+]
+
+# 퀴즈 게임 함수
+def start_quiz():
+    global quiz_data, current_quiz, score
+    
+    if len(quiz_data) == 0:
+        messagebox.showinfo("게임 종료", f"퀴즈 게임이 모두 종료되었습니다.\n최종 점수: {score}점")
+        window.destroy()
+        return
+    
+    current_quiz = quiz_data.pop(0)
+    question_label.config(text=current_quiz["question"])
+    for i, option in enumerate(current_quiz["options"]):
+        option_buttons[i].config(text=option)
+    
+def check_answer(answer):
+    global current_quiz, score
+    
+    if answer == current_quiz["answer"]:
+        score += 1
+        messagebox.showinfo("정답", "정답입니다!")
+    else:
+        messagebox.showinfo("오답", "틀렸습니다!")
+    
+    start_quiz()
+
+# 윈도우 생성
+window = tk.Tk()
+window.title("과학 퀴즈")
+
+# 질문 라벨
+question_label = tk.Label(window, text="", font=("Helvetica", 16))
+question_label.pack(padx=10, pady=10)
+
+# 선택지 버튼
+option_buttons = []
+for i in range(4):
+    button = tk.Button(window, text="", font=("Helvetica", 12), width=30, command=lambda i=i: check_answer(option_buttons[i]["text"]))
+    button.pack(padx=5, pady=5)
+    option_buttons.append(button)
+
+# 게임 시작 버튼
+start_button = tk.Button(window, text="건너뛰기", font=("Helvetica", 12), width=30, command=start_quiz)
+start_button.pack(padx=10, pady=10)
+
+# 게임 변수 초기화
+current_quiz = None
+score = 0
+
+# 게임 시작
+start_quiz()
+
+# 윈도우 실행
+window.mainloop()
