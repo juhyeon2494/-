@@ -1,4 +1,4 @@
-import tkinter as tk
+ㅑmport tkinter as tk
 from tkinter import messagebox
 
 # 퀴즈 데이터
