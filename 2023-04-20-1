@@ -1,6 +1,6 @@
 package kjh;
 
-public class 김유빈개멍청함 {
+public class kjh{
 
 	public static void main(String[] args) {
 		int 숫자 = 1;
